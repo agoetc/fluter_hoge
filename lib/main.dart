@@ -15,8 +15,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter Demo'),
         ),
-        body: Center(
-          child: Text('Hello World'),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Text('Default'),
+            Text('data', style: TextStyle(fontSize: 100)),
+            Container(
+              width: double.infinity,
+              color: Colors.grey,
+              // 表示位置を指定
+              child: Text('TextAlign.right', textAlign: TextAlign.right),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
